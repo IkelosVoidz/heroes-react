@@ -34,7 +34,7 @@ export const SearchPage = () => {
 			<hr />
 
 			<div className='row'>
-				<div className='col-5'>
+				<div className='col-12 col-md-5 mb-2'>
 					<h4>Searching</h4>
 					<hr />
 					<form onSubmit={onSearchSubmit}>
@@ -52,7 +52,7 @@ export const SearchPage = () => {
 						</button>
 					</form>
 				</div>
-				<div className='col-7'>
+				<div className='col-12 col-md-7'>
 					<h4>Results</h4>
 					<hr />
 
@@ -62,9 +62,11 @@ export const SearchPage = () => {
 							<div className='alert alert-danger animate__animated animate__fadeIn'> No results match : <b>{q}</b> </div>
 						}
 		
-					{heroes.map((hero) => (
-						<HeroCard key={hero.id} {...hero}></HeroCard>
-					))}
+					<div className={`row ${heroes.length >= 2 ? 'row-cols-sm-2 row-cols-1' : 'row-cols-1'}`}>			
+						{heroes.map((hero) => (
+							<HeroCard key={hero.id} {...hero}></HeroCard>
+						))}
+					</div>
 				</div>
 			</div>
 		</>

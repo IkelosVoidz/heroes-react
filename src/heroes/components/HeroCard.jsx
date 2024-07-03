@@ -16,7 +16,7 @@ export const HeroCard = ({
 		<div className='col'>
 			<div className='card'>
 				<div className='row no-gutters'>
-					<div className='col-4 animate__animated animate__fadeIn'>
+					<div className='col-md-12 col-lg-5 col-xl-5 col-xxl-6 animate__animated animate__fadeIn'>
 						<img
 							src={heroImageUrl}
 							className='card-img'
@@ -24,7 +24,7 @@ export const HeroCard = ({
 						/>
 					</div>
 
-					<div className='col-8'>
+					<div className='col-sm-12 col-lg-7 col-xl-7 col-xxl-6'>
 						<div className='card-body'>
 							<h5 className='card-title'> {superhero}</h5>
 							<p className='card-text'> {alter_ego} </p>
